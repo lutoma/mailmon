@@ -1,0 +1,44 @@
+source:
+  from_domain: example.org
+  smtp_host: smtp.example.org
+  smtp_user: hermes@example.org
+  smtp_password: foobar
+
+mail:
+  headers:
+    From: Hermes Conrad <hermes@example.org>
+    To: Eris Discordia <{addr}>
+    Subject: Hello world
+    Content-Language: 'en-US-large'
+    User-Agent: 'SOGoMail 5.6.0'
+
+  template:
+    Hi Eris,
+
+    how's life? Check out what I found on Wikipedia:
+
+    {snippet}
+
+    Cheers,
+    Hermes
+
+kuma:
+  host: https://status.example.org
+
+targets:
+  -
+    name: 'Gmail'
+    host: 'imap.gmail.com'
+    address: 'example@gmail.com'
+    user: 'example@gmail.com'
+    password: 'foobar'
+    kuma_key: 'foobar'
+
+  -
+    name: 'web.de'
+    host: 'imap.web.de'
+    address: 'example@web.de'
+    user: 'example@web.de'
+    password: 'example'
+    kuma_key: 'example'
+
